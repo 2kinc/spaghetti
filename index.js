@@ -91,5 +91,19 @@ var spaghetti = {
                 })
             }
         };
+        this.lock = function () {
+            Object.defineProperty(this, 'value', {
+                enumerable: false,
+                writable: false
+            });
+        };
+        this.unlock = function (unlocking_key) {
+            if (unlocking_key == key) {
+                Object.defineProperty(this, 'value', {
+                    enumerable: true,
+                    writable: true
+                });
+            }
+        };
     }
 };
