@@ -6,6 +6,10 @@ var spaghetti = {
         string = string.join(setSplitter);
         return string;
     },
+    generate: function () {
+        var string = Math.floor(Math.random()*100000000000000001+1).toString(36).slice(-11).toString(Math.floor(Math.random()*36+1));
+        return string;
+    },
     stir: function (text) {
         var length = text.length;
         var arr = text.split('');
