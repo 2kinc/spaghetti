@@ -66,7 +66,7 @@ var spaghetti = {
         string = arr.join('');
         return string;
     },
-    spaghettiString: function (string, key) {
+    is: function (string, key) {
         this.value = string;
         Object.defineProperty(this, 'value', {
             enumerable: true,
