@@ -7,7 +7,7 @@ var spaghetti = {
         return string;
     },
     generate: function () {
-        var string = spaghetti.cook(Math.floor(Math.random()*100000000000000001+1).toString(36).slice(-11).toString(Math.floor(Math.random()*36+1));
+        var string = spaghetti.cook(Math.floor(Math.random()*100000000000000001+1).toString(36).slice(-11).toString(Math.floor(Math.random()*36+1)),'dkjafsldkxzczlseqer',0.03);
         return string;
     },
     stir: function (text) {
