@@ -23,6 +23,28 @@
         <p>or <a href="main.js" download>download</a> the script. </p>
         <p>Watch it in action!</p>
         <p id="actn-p">Regular old paragraph.</p><button id="actn-btn">Press me.</button>
+        <h2>Docs</h2>
+        <p>Here are the functions: </p>
+        <ul>
+            <li>
+                <code>spaghetti.reverse(text, splitter)</code>
+                <p>
+                    This function is pretty self explanatory. <code>spaghetti.reverse(text, splitter)</code> 
+                    takes a string and reverses it. You can leave the second parameter blank to reverse the string,
+                    or you can give a value such as <code>" "</code> to split on that value and preserve the split values. 
+                    Example: <br> <br>
+                    <code block>
+                        spaghetti.reverse("Spaghetti and meatballs for you!") <br>
+                        > "!uoy rof sllabtaem dna ittehgapS" <br>
+                        spaghetti.reverse("Did you touch my spaghetti?", " ") <br>
+                        > "spaghetti? my touch you Did"
+                    </code> <br>
+                    Try it! <br>
+                    <p id="reverse-demo">SPAGHET! here's a paragraph to reverse! wow! did you reverse me?</p>
+                    <button id="reverse-demo-button">Reverse!</button>
+                </p>
+            </li>
+        </ul>
         <script src="main.js" charset="utf-8"></script>
         <script src="index.js"></script>
     </body>
