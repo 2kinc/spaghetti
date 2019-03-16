@@ -12,8 +12,10 @@ document.querySelector('#actn-btn').addEventListener('click', function() {
 });
 
 document.querySelector('#reverse-demo-button').addEventListener('click', function () {
+    var string = document.querySelector('#reverse-demo').innerHTML;
     var t1 = performance.now();
-    document.querySelector('#reverse-demo').innerHTML = spaghetti.reverse(document.querySelector('#reverse-demo').innerHTML);
+    string = spaghetti.reverse(string);
     var t2 = performance.now();
+    document.querySelector('#reverse-demo').innerText = string;
     document.querySelector('#reverse-demo-speed').innerText = 'Reversed in ' + (t2 - t1).toFixed(3) + 'ms ' + '(' + Math.floor(1000 / (t2 - t1)) + ' queries per second)';
 });
