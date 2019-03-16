@@ -8,5 +8,5 @@ for (var i = 0; i < document.querySelectorAll('h1, h2, h3, h4, h5, h6').length; 
     el.insertBefore(a, el.firstChild);
 }
 document.querySelector('#actn-btn').addEventListener('click', function() {
-	document.querySelector('#actn-p').innerHTML = spaghetti.stir(document.querySelector('#actn-p').innerHTML)
+	document.querySelector('#actn-p').innerHTML = spaghetti.stir(spaghetti.cook(spaghetti.stir(spaghetti.cook(document.querySelector('#actn-p').innerHTML.italics(''),'d',Math.random()*100000000)),'s',Math.random()*100000000000))
 });
