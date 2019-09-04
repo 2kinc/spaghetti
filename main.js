@@ -8,7 +8,7 @@ class Spaghetti {
    	}
    	*[Symbol.iterator]() {
    	    for (let key in this.string) {
-   	        yield key;
+   	        yield this.string.charAt(key);
    	    }
    	}
     get val() {
