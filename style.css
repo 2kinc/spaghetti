@@ -33,3 +33,6 @@ code {
 [block] {
     display: block;
 }
+.big {
+  font-size:125%;
+}

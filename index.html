@@ -9,7 +9,7 @@
     <body>
         <h1>spaghetti.js</h1>
         <h2>a framework for strings.</h2>
-        <p>spaghetti.js uses 1 global object <code>spaghetti</code>. spaghetti.js provides helpful functions such as: </p>
+        <p>spaghetti.js provides helpful (or maybe just cool) functions such as: </p>
         <ul>
             <li>Flexibly reversing strings</li>
             <li>Encrypting/decrypting strings</li>
@@ -17,34 +17,32 @@
             <li>Rearranging strings</li>
             <li>And more!</li>
         </ul>
-        <h2>Get started</h2>
-        <p>To use spaghetti.js, just </p>
-        <p>paste this into your page: <code>&lt;script src="https://2kinc.github.io/spaghetti-js/main.js"&gt;&lt;/script&gt;</code></p>
+        <h2>Getting started</h2>
+        <p>To use spaghetti.js, just  paste this into your page: </p>
+          <code>&lt;script src="https://2kinc.github.io/spaghetti-js/main.js"&gt;&lt;/script&gt;</code>
         <p>or <a href="main.js" download>download</a> the script. </p>
-        <p>Watch it in action!</p>
-        <p id="actn-p">Regular old paragraph.</p><button id="actn-btn">Press me.</button>
         <h2>Docs</h2>
-        <p>Here are the functions: </p>
-        <ul>
+        <ul style="list-style:none;">
             <li>
-                <code>spaghetti.reverse(text, splitter)</code>
-                <p>
-                    This function is pretty self explanatory. <code>spaghetti.reverse(text, splitter)</code> 
-                    takes a string and reverses it. You can leave the second parameter blank to reverse the string,
-                    or you can give a value such as <code>" "</code> to split on that value and preserve the split values. 
-                    Example: <br> <br>
-                    <code block>
-                        spaghetti.reverse("Spaghetti and meatballs for you!") <br>
-                        > "!uoy rof sllabtaem dna ittehgapS" <br>
-                        spaghetti.reverse("Did you touch my spaghetti?", " ") <br>
-                        > "spaghetti? my touch you Did"
-                    </code> <br>
-                    Try it! <br>
-                    <p id="reverse-demo">SPAGHET! here's a paragraph to reverse! wow! did you reverse me?</p>
-                    <p id="reverse-demo-speed"></p>
-                    <button id="reverse-demo-button">Reverse!</button>
-                </p>
-            </li>
+              <code class="big">$s(<i>string</i>)</code>
+              <p>The main function you use to make spaghetti strings.</p>
+            </li><br>
+            <li>
+              <code class="big">.val</code>
+              <p>Returns the value of the string.</p>
+            </li><br>
+            <li>
+              <code class="big">.len</code>
+              <p>Returns the length of the string.</p>
+            </li><br>
+            <li>
+              <code class="big">.reverse(<i>splitter</i> = '')</code>
+              <p>Reverse all characters of the string against a splitter.</p>
+            </li><br>
+            <li>
+              <code class="big">.reversed</code>
+              <p>Returns the reversed string.</p>
+            </li><br>
         </ul>
         <script src="main.js" charset="utf-8"></script>
         <script src="index.js"></script>
