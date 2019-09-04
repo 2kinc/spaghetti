@@ -18,7 +18,7 @@ class Spaghetti {
         return this.string.length;
     }
     reverse(d) {
-        this.string = this.string.split(d || '').reverse().join('');
+        this.string = this.string.split(d || '').reverse().join(d || '');
         return this.string;
     }
     get reversed() {
