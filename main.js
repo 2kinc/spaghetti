@@ -3,7 +3,7 @@ $s.strings = [];
 class Spaghetti {
     constructor(string, notpush) {
     	notpush = notpush || false;
-    	this.string = string;
+      this['[[PrimitiveValue]]'] = string;
     	if (!notpush) $s.strings.push(this);
    	}
    	*[Symbol.iterator]() {
@@ -11,9 +11,16 @@ class Spaghetti {
    	        yield this.string.charAt(key);
    	    }
    	}
-    get val() {
-        return this.string;
+    get string() {
+        return this['[[PrimitiveValue]]'];
     }
+    set string(v) {
+      this['[[PrimitiveValue]]'] = v;
+    }
+    get val() {
+      return this.string;
+    }
+    set val(d) {}
     get len() {
         return this.string.length;
     }
@@ -37,7 +44,7 @@ class Spaghetti {
         return this.string;
     }
     get stirred() {
-        return new Spaghetti(this.string).randomize();
+        return new Spaghetti(this.string).stir();
     }
     add(...strings) {
         strings.forEach(string => {
@@ -127,5 +134,6 @@ class Spaghetti {
 		return this.string;
 	}
 }
+Spaghetti.prototype.valueOf = function() {return this.string};
 $s.alphabet = $s('abcdefghijklmnopqrstuvwxyz');
 $s.random = n => $s([...Array(n)].map(i => (~~(Math.random() * 36)).toString(36)).join(''));
